@@ -12,7 +12,7 @@
 	<artifactId>DocumentManagingTool</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>DocumentManagingTool</name>
-	<description>DocumentManagingTool for PDF creation</description>
+	<description>DocumentManagingTool to create and download pdf files</description>
 	<properties>
 		<java.version>18</java.version>
 	</properties>

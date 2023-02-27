@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/employee.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <img src="/images/comline.jpg" align="right">
+    <title>IHK Abschlussprojekt</title>
+    <h1>Mitarbeiterverzeichnis</h1>
+    <br>
+    <br>
+    <div class="container">
+        <table id="table_employee">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Vorname</th>
+                    <th>Nachname</th>
+                    <th>Bitte auswählen</th>
+                </tr>
+        </thead>
+        <tbody>
+            <tr th:each="employee : ${listEmployee}">
+                <td th:text="${employee.id}"></td>
+                <td th:text="${employee.vorname}"></td>
+                <td th:text="${employee.nachname}"></td>
+                <td class="dropdown">
+                    <button class="dropbtn" onclick="myFunction(event)" data-employee-id="${employee.id}" id="btn-${employee.id}">PDF erstellen
+                        <span class="arrow-icon"></span>
+                    </button>
+                    <div class="dropdown-content" id="dropdown-${employee.id}">
+                        <a th:href="@{/employee/export/{id}(id=${employee.id})}">Lagerentnahmeschein</a>
+                    </div>
+                </td>
+            </tr>
+        </tbody>        
+    </table>
+</div>
+<p>Wenn Sie einen Mitarbeiter hinzufügen möchten dann klicken Sie bitte <a href="add">hier!</a></p>
+<script>
+    $(document).ready(function() {
+        $('.dropbtn').on('click', function() {
+            var employeeId = $(this).data('employee-id');
+            window.location.href = '/export/' + employeeId;
+        });
+    });
+</script>
+<script>
+    function myFunction(event) {
+        var dropdown = event.target.nextElementSibling;
+        dropdown.classList.toggle("show");
+        event.target.classList.toggle("open");
+    }
+
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var dropdown = dropdowns[i];
+                if (dropdown.classList.contains('show')) {
+                    dropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

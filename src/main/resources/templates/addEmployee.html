@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/addEmployee.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+</head>
+
+<body>
+    <img src="/images/comline.jpg" align="right">
+    <title>IHK Abschlussprojekt</title>
+    <h1>Datenerfassung</h1>
+        <div class="select">
+        <select required="true" name="weiterleitung_name" form="eingabeForm">
+            <option value="datenbank">In Datenbank übertragen</option>
+        </select>
+        </div>
+
+        <p><strong>Bitte tragen Sie hier den Namen des Mitarbeiters ein:</strong></p>
+
+        <div class="input">
+        <form method="POST" action="#" th:action="@{/employee/addEmployee}" id="eingabeForm">
+
+            Vorname:
+            <input style="height: 20px; font-size: 19px;" type=text name="vornameEingabe"/>
+            Nachname:
+            <input style="height: 20px; font-size: 19px;" type=text name="nachnameEingabe"/>
+
+            <input style="height: 26px;" type="submit" value="Eingaben übertragen"/>
+            <input style="height: 26px;" type="reset" value="Eingaben zurücksetzen"/>
+        </form>
+        </div>
+    <!--<p1><strong>Bitte holen Sie vor der Eingabe der Daten die Erlaubnis der betreffenden Person ein!</strong></p1>-->
+</body>
+</html>

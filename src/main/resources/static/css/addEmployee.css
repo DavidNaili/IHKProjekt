@@ -1,0 +1,28 @@
+h1 {font-size: 40px;}
+
+body   { 
+	background-color: white;
+}
+
+p {
+	position: relative;
+	top: 36px;
+	background-color: #61112c;
+	color: white;
+	padding: 8px;
+	font-size: 25px;
+}
+
+p1{
+	position: relative;
+	top: 300px;
+	font-size: 30px;
+}
+
+.select {display: none;}
+
+.input{
+	position: relative;
+	top: 150px;
+	font-size: 30px;
+}

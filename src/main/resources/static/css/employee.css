@@ -1,0 +1,88 @@
+table {
+	border-collapse: collapse;
+	width: 100%;
+  }
+  
+  th, td {
+	text-align: left;
+	padding: 8px;
+  }
+  
+  tr:nth-child(even){background-color: #f2f2f2}
+  
+  th {
+	background-color: #61112c;
+	color: white;
+  }
+  
+td {font-size: 20px;}
+th {font-size: 25px;}
+h1 {font-size: 40px;}
+
+caption {text-align: left;}
+
+body {background-color: white;}
+
+/* Dropdown Button */
+.dropbtn {
+	position: relative;
+	display: inline-block;
+	background-color: #61112c;
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+  }
+
+  /* Pfeil Icon */
+.arrow-icon {
+	content: '';
+	display: inline-block;
+	margin-left: 5px;
+	width: 0;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-left: 5px solid white;
+	transform: rotate(-180deg);
+	transition: transform 0.3s ease;
+  }
+  
+  /* Pfeil Icon bei geöffnetem Dropdown Button */
+  .dropbtn.open .arrow-icon {
+	transform: rotate(0deg);
+  }
+  
+  /* Dropdown Button bei geöffnetem Dropdown */
+  .dropdown-content.show {
+	display: block;
+  }
+
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+	position: relative;
+	display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	top: 9px; left: 155px;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}

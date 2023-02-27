@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.project</groupId>
-	<artifactId>EmployeeManagingTool</artifactId>
+	<artifactId>DocumentManagingTool</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>DocumentManagingTool</name>
-	<description>DocumentManagingTool project for Spring Boot</description>
+	<description>DocumentManagingTool for PDF creation</description>
 	<properties>
 		<java.version>18</java.version>
 	</properties>

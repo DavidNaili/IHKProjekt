@@ -16,16 +16,16 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Vorname</th>
                     <th>Nachname</th>
-                    <th>Bitte auswählen</th>
+                    <th>Vorname</th>
+                    <th>Bitte Dokument zum erstellen auswählen</th>
                 </tr>
         </thead>
         <tbody>
             <tr th:each="employee : ${listEmployee}">
                 <td th:text="${employee.id}"></td>
-                <td th:text="${employee.vorname}"></td>
                 <td th:text="${employee.nachname}"></td>
+                <td th:text="${employee.vorname}"></td>
                 <td class="dropdown">
                     <button class="dropbtn" onclick="myFunction(event)" data-employee-id="${employee.id}" id="btn-${employee.id}">PDF erstellen
                         <span class="arrow-icon"></span>

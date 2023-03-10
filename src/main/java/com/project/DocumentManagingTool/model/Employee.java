@@ -2,8 +2,13 @@ package com.project.DocumentManagingTool.model;
 
 import javax.persistence.*;
 
+import lombok.Getter;
+import lombok.Setter;
+
 @Entity
 @Table(name= "Employee")
+@Getter
+@Setter
 public class Employee {
  
     @Id
@@ -21,25 +26,4 @@ public class Employee {
         this.vorname = vorname;
         this.nachname = nachname;
     }
-
-    public int getId() {
-        return this.id;
-    }
-
-    public String getVorname() {
-        return this.vorname;
-    }
-
-    public void setVorname(String vorname) {
-        this.vorname = vorname;
-    }
-
-    public String getNachname() {
-        return this.nachname;
-    }
-
-    public void setNachname(String nachname) {
-        this.nachname = nachname;
-    }
-
 }

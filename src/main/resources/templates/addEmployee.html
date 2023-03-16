@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html lang="de" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <!-- Einbindung einer externen CSS-Datei -->
     <link rel="stylesheet" type="text/css" href="/css/addEmployee.css">
+    <!-- Definition der Zeichenkodierung und des Viewports -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">   
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Für die Skalierung auf Mobilgeräten -->
 </head>
 
 <body>
+    <!-- Logo oben rechts auf der Seite -->
     <img src="/images/comline.jpg" align="right">
     <title>IHK Abschlussprojekt</title>
     <h1>Datenerfassung</h1>
+        <!-- Dropdown-Menü zur Auswahl des Weiterleitungspfades -->
         <div class="select">
         <select required="true" name="weiterleitung_name" form="eingabeForm">
+            <!-- Optionen im Dropdown-Menü -->
             <option value="datenbank">In Datenbank übertragen</option>
         </select>
         </div>
 
+        <!-- Beschreibung des Eingabefelds -->
         <p><strong>Bitte tragen Sie hier den Namen des Mitarbeiters ein:</strong></p>
 
+        <!-- Eingabeformular -->
         <div class="input">
         <form method="POST" action="#" th:action="@{/employee/addEmployee}" id="eingabeForm">
 
             Nachname:
-            <input style="height: 20px; font-size: 19px;" type=text name="nachnameEingabe"/>
+            <input style="height: 20px; font-size: 19px;" type=text name="nachnameEingabe"/> <!-- Eingabefeld für den Nachnamen -->
             Vorname:
-            <input style="height: 20px; font-size: 19px;" type=text name="vornameEingabe"/>
+            <input style="height: 20px; font-size: 19px;" type=text name="vornameEingabe"/> <!-- Eingabefeld für den Vornamen -->
 
-            <input style="height: 26px;" type="submit" value="Eingaben übertragen"/>
-            <input style="height: 26px;" type="reset" value="Eingaben zurücksetzen"/>
+            <input style="height: 26px;" type="submit" value="Eingaben übertragen"/> <!-- Schaltfläche zum Übertragen der Eingaben -->
+            <input style="height: 26px;" type="reset" value="Eingaben zurücksetzen"/> <!-- Schaltfläche zum Zurücksetzen der Eingaben -->
         </form>
-        </div>
-    <!--<p1><strong>Bitte holen Sie vor der Eingabe der Daten die Erlaubnis der betreffenden Person ein!</strong></p1>-->
+        </div> <!-- Ende des Eingabeformulars -->
 </body>
 </html>

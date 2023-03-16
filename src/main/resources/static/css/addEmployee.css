@@ -1,28 +1,28 @@
+/* Stile für die Überschrift 1 festlegen */
 h1 {font-size: 40px;}
-
+/* Hintergrundfarbe für den gesamten Körper festlegen */
 body   { 
 	background-color: white;
 }
 
+/* Stile für die Absatz-Elemente festlegen */
 p {
-	position: relative;
-	top: 36px;
-	background-color: #61112c;
-	color: white;
-	padding: 8px;
-	font-size: 25px;
+    position: relative;    		 		/* Elementposition relativ zur normalen Position */
+    top: 36px;             				/* Abstand zum oberen Rand */
+    background-color: #61112c;		   /* Hintergrundfarbe */
+    color: white;          		   /* Schriftfarbe */
+    padding: 8px;          				/* Abstand zwischen Rand und Text */
+    font-size: 25px;       				/* Schriftgröße */
 }
 
-p1{
-	position: relative;
-	top: 300px;
-	font-size: 30px;
+/* Stile für das Select-Element festlegen */
+.select {
+    display: none;         				/* Select-Element ausblenden */
 }
 
-.select {display: none;}
-
+/* Stile für das Eingabe-Formular festlegen */
 .input{
-	position: relative;
-	top: 150px;
-	font-size: 30px;
+    position: relative;     			/* Elementposition relativ zur normalen Position */
+    top: 150px;            				/* Abstand zum oberen Rand */
+    font-size: 30px;       				/* Schriftgröße */
 }

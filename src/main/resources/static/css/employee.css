@@ -60,13 +60,13 @@ body {background-color: white;}
   }
 
   
-  /* The container <div> - needed to position the dropdown content */
+  /* Position bestimmen für den Inhalt des Dropdown Button */
   .dropdown {
 	position: relative;
 	display: inline-block;
   }
   
-  /* Dropdown Content (Hidden by Default) */
+  /* Dropdown Inhalt */
   .dropdown-content {
 	display: none;
 	position: absolute;
@@ -77,7 +77,7 @@ body {background-color: white;}
 	z-index: 1;
   }
   
-  /* Links inside the dropdown */
+  /* Links im dropdown */
   .dropdown-content a {
 	color: black;
 	padding: 12px 16px;
@@ -85,5 +85,5 @@ body {background-color: white;}
 	display: block;
   }
   
-  /* Change color of dropdown links on hover */
+  /* Verändert Farbe des dropdown links beim drüberfahren mit der Maus */
   .dropdown-content a:hover {background-color: #ddd;}

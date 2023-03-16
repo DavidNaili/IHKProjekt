@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="de" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <!-- Einbindung einer externen CSS-Datei -->
     <link rel="stylesheet" type="text/css" href="/css/employee.css">
+    <!-- Definition der Zeichenkodierung und des Viewports -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+    <!-- Logo oben rechts auf der Seite -->
     <img src="/images/comline.jpg" align="right">
     <title>IHK Abschlussprojekt</title>
     <h1>Mitarbeiterverzeichnis</h1>
     <br>
     <br>
+    <!-- Container-Element zur Begrenzung des Inhalts -->
     <div class="container">
+        <!-- Tabelle mit Mitarbeitern -->
         <table id="table_employee">
+             <!-- Tabellenüberschrift -->
             <thead>
                 <tr>
                     <th>ID</th>
@@ -21,24 +27,36 @@
                     <th>Bitte Dokument zum Erstellen auswählen:</th>
                 </tr>
         </thead>
+        <!-- Tabellenkörper -->
         <tbody>
+            <!-- Für jeden Mitarbeiter in der Liste eine Tabellenzeile erstellen -->
             <tr th:each="employee : ${listEmployee}">
+                 <!-- Anzeige der ID des Mitarbeiters -->
                 <td th:text="${employee.id}"></td>
+                <!-- Anzeige des Nachnamens des Mitarbeiters -->
                 <td th:text="${employee.nachname}"></td>
+                <!-- Anzeige des Vornamens des Mitarbeiters -->
                 <td th:text="${employee.vorname}"></td>
+                <!-- Dropdown-Button zum Exportieren eines PDFs erstellen -->
                 <td class="dropdown">
+                    <!-- Button zum Öffnen des Dropdown-Menüs -->
                     <button class="dropbtn" onclick="myFunction(event)" data-employee-id="${employee.id}" id="btn-${employee.id}">PDF erstellen
+                        <!-- Pfeil-Icon rechts neben dem Button -->
                         <span class="arrow-icon"></span>
                     </button>
+                    <!-- Dropdown-Menü zur Auswahl des PDF-Dokuments -->
                     <div class="dropdown-content" id="dropdown-${employee.id}">
+                        <!-- Link zum Export des ausgewählten PDF-Dokuments -->
                         <a th:href="@{/employee/export/{id}(id=${employee.id})}">Lagerentnahmeschein</a>
                     </div>
                 </td>
             </tr>
         </tbody>        
-    </table>
-</div>
+        </table>
+    </div>
+<!-- Anleitung zur Hinzufügung neuer Mitarbeiter -->
 <p>Wenn Sie einen Mitarbeiter hinzufügen möchten, dann klicken Sie bitte <a href="add">hier!</a></p>
+<!-- JavaScript-Code für die Weiterleitung auf die Export-Seite -->
 <script>
     $(document).ready(function() {
         $('.dropbtn').on('click', function() {
@@ -47,6 +65,7 @@
         });
     });
 </script>
+<!-- JavaScript-Code für die Anzeige des Dropdown-Menüs -->
 <script>
     function myFunction(event) {
         var dropdown = event.target.nextElementSibling;

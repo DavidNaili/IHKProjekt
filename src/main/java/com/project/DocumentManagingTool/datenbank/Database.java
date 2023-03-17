@@ -1,6 +1,5 @@
 // Diese Zeile deklariert das Package, zu dem diese Klasse gehört
 package com.project.DocumentManagingTool.datenbank;
-
 // Diese Zeilen importieren Klassen, die in der Anwendung verwendet werden
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -39,3 +38,5 @@ public class Database implements CommandLineRunner {
         });
     }
 }
+
+

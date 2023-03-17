@@ -26,16 +26,31 @@
 
         <!-- Eingabeformular -->
         <div class="input">
-        <form method="POST" action="#" th:action="@{/employee/addEmployee}" id="eingabeForm">
+        <!-- Hier wird das Eingabeformular erstellt und das onsubmit-Attribut mit der validateInput() Funktion hinzugefügt -->
+        <form method="POST" action="#" th:action="@{/employee/addEmployee}" id="eingabeForm" onsubmit="return validateInput();">
 
             Nachname:
             <input style="height: 20px; font-size: 19px;" placeholder="Nachname" type=text name="nachnameEingabe"/> <!-- Eingabefeld für den Nachnamen -->
             Vorname:
             <input style="height: 20px; font-size: 19px;" placeholder="Vorname" type=text name="vornameEingabe"/> <!-- Eingabefeld für den Vornamen -->
 
-            <input style="height: 26px;" type="submit" value="Eingaben übertragen"/> <!-- Schaltfläche zum Übertragen der Eingaben -->
+            <input style="height: 26px;" type="submit" value="Eingaben übertragen"/><!-- Schaltfläche zum Übertragen der Eingaben -->
             <input style="height: 26px;" type="reset" value="Eingaben zurücksetzen"/> <!-- Schaltfläche zum Zurücksetzen der Eingaben -->
         </form>
         </div> <!-- Ende des Eingabeformulars -->
+        
+        <!-- Dies ist die validateInput() Funktion die überprüft ob Daten eigegeben wurden -->
+        <script>
+            function validateInput() {
+            const nachname = document.getElementsByName("nachnameEingabe")[0].value;
+            const vorname = document.getElementsByName("vornameEingabe")[0].value;
+
+            if (!nachname || !vorname) {
+            alert("Bitte geben Sie zuerst einen Nachnamen und Vornamen ein.");
+            return false;
+            }
+            return true;
+            }
+        </script>
 </body>
 </html>

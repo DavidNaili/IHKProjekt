@@ -26,3 +26,10 @@ p {
     top: 150px;            				/* Abstand zum oberen Rand */
     font-size: 30px;       				/* Schriftgröße */
 }
+/* Stile für den Placeholder im Inputfeld festlegen */
+::placeholder{
+    opacity: 0.5;
+    color: f9f9f9;
+    font-style: italic;
+    padding-left: 5px;
+}
